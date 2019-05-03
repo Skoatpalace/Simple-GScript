@@ -8,7 +8,7 @@ function createDoc(){
   var doc = DocumentApp.create('New Test Doc') 
   }
 function updateDoc(){
-  var doc = DocumentApp.openById('1VbuLY86hkqiJ6kakCFFyQ6GDkZvljUlDujsubzaxUJY');
+  var doc = DocumentApp.openById('1DJm7dWvItBygpoC9ovSkhM619Rff3X8U0e1BEP0RtGU');
   //var doc = DocumentApp.openByUrl('https://docs.google.com/open?id=1VbuLY86hkqiJ6kakCFFyQ6GDkZvljUlDujsubzaxUJY');
   var body = doc.getBody();
   body.appendParagraph('Some new content : added ' + Date());
@@ -16,7 +16,7 @@ function updateDoc(){
   body.appendPageBreak();
 }
 function seeDoc(){
-  var doc = DocumentApp.openById('1VbuLY86hkqiJ6kakCFFyQ6GDkZvljUlDujsubzaxUJY');
+  var doc = DocumentApp.openById('1DJm7dWvItBygpoC9ovSkhM619Rff3X8U0e1BEP0RtGU');
   var body = doc.getBody();
   var selection = body.getText();
   Logger.log(selection);
@@ -28,7 +28,7 @@ function seeDoc(){
   body.appendParagraph(french);
 }
 function seeParagraphOne(){
-  var doc = DocumentApp.openById('1VbuLY86hkqiJ6kakCFFyQ6GDkZvljUlDujsubzaxUJY');
+  var doc = DocumentApp.openById('1DJm7dWvItBygpoC9ovSkhM619Rff3X8U0e1BEP0RtGU');
   var body = doc.getBody();
   var p1 = body.getChild(1);
   Logger.log(p1.getText());
@@ -54,7 +54,7 @@ function seeParagraphOne(){
 //SPACING_BEFORE=0.0, HEADING=Normal, 
 //SPACING_AFTER=0.0, STRIKETHROUGH=null, FOREGROUND_COLOR=null, BOLD=null, FONT_FAMILY=null}
 function seeParagraphTwo(){
-  var doc = DocumentApp.openById('1VbuLY86hkqiJ6kakCFFyQ6GDkZvljUlDujsubzaxUJY');
+  var doc = DocumentApp.openById('1DJm7dWvItBygpoC9ovSkhM619Rff3X8U0e1BEP0RtGU');
   var body = doc.getBody();
   Logger.log(body.getParagraphs().length);
   //Logger.log(body.getNumChildren());
