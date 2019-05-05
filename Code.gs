@@ -71,3 +71,18 @@ function seeParagraphTwo(){
   }
   
 }
+
+function seeParagraphThree(){
+  var doc = DocumentApp.openById('1DJm7dWvItBygpoC9ovSkhM619Rff3X8U0e1BEP0RtGU');
+  var body = doc.getBody();
+  var att = {
+    "FOREGROUND_COLOR" : "#ffff00",
+    "BOLD" : true
+  }
+  for(var x=0; x<body.getNumChildren(); x++){
+    var el = body.getChild(x);
+    el.setAttributes(att); 
+    var text = el.editAsText(); 
+    Logger.log(text.length);     
+  }
+}
